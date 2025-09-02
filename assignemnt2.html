@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bus Booking - Welcome</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+      text-align: center;
+    }
+    header {
+      width: 100%;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: #fff;
+      border-bottom: 1px solid #ccc;
+    }
+    header img {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: bold;
+      color: #007bff; /* Blue for main title */
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Center both vertically */
+      gap: 40px;
+      margin-top: 50px;
+    }
+    .card {
+      width: 500px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: left;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+      border-radius: 20px;
+    }
+    h3 {
+      margin-bottom: 20px;
+      text-align: center;
+      color: #28a745; /* Green for subheading */
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #03356c;
+      color: #fff;
+      border: none;
+      margin-top: 15px;
+      cursor: pointer;
+      font-size: 15px;
+      border-radius: 20px;
+    }
+    button:hover {
+      background: #04c7c7;
+    }
+    .bus-img {
+      width: 280px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="logo.png" alt="Logo">
+    <h1>BUS BOOK SEAT</h1>
+  </header>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="card">
+      <h3>Welcome to Bus Booking System</h3>
+      
+      <form action="seat.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+          <option value="">--Select--</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+        
+        <label for="city">City:</label>
+        <select id="city" required>
+          <option value="">--Select--</option>
+          <option>Delhi</option>
+          <option>Mumbai</option>
+          <option>Bangalore</option>
+          <option>Kolkata</option>
+        </select>
+        
+        <button type="submit">Book Seat</button>
+      </form>
+    </div>
+
+    <!-- Bus Image -->
+    <img src="bus.jpeg" alt="Bus Image" class="bus-img">
+  </div>
+</body>
+</html>
