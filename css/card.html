@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* Big Card */
+    .big-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 750px;
+    }
+
+    .big-card h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    /* Container for small cards */
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    /* Individual food card */
+    .card {
+      background: #fafafa;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 20px;
+      color: #222;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #333;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .buttons button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .order {
+      background: #f44c4c;
+      color: white;
+    }
+
+    .order:hover {
+      background: #d41601;
+    }
+
+    .pay {
+      background: #d4d2d2d4;
+      color: rgb(104, 103, 103);
+    }
+
+    .pay:hover {
+      background: #bddaf7;
+    }
+  </style>
+</head>
+<body>
+  <!-- Big Card -->
+  <div class="big-card">
+    <h2> Our Special Menu</h2>
+    
+    <div class="container">
+      <!-- Burger Card -->
+      <div class="card">
+        <img src="burger.jpeg" alt="Burger">
+        <h3>Burger</h3>
+        <p class="price">$5.99</p>
+        <div class="buttons">
+          <button class="order">Add</button>
+          <button class="pay">Order</button>
+        </div>
+      </div>
+
+      <!-- Pizza Card -->
+      <div class="card">
+        <img src="pizza.jpeg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p class="price">$8.99</p>
+        <div class="buttons">
+          <button class="order">Add</button>
+          <button class="pay">Order</button>
+        </div>
+      </div>
+
+      <!-- Coke Card -->
+      <div class="card">
+        <img src="coke.jpeg" alt="Coke">
+        <h3>Coke</h3>
+        <p class="price">$1.99</p>
+        <div class="buttons">
+          <button class="order">Add</button>
+          <button class="pay">Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
