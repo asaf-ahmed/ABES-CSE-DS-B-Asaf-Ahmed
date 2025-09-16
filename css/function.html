@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 
 <head>
+    <style>
+        #asaf{
+            height: 300px;
+            width: 300px;
+            background-color: yellowgreen;
+            border: 5px solid black;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="asaf">
+        <button onclick="abes()">click</button>
+        <p id="aaa"></p>
+    </div>
+    
     <script>
-        function abes()
-        {
-            document.write("python program");
-        }
-        abes();
-        function add(a, b) {
-            return a + b;
+
+        function abes(){
+            document.getElementById("aaa").innerHTML = "Hello, World!";
         }
 
-        function subtract(a, b) {
-            return a - b;
-        }
+
+
+
+
+
+
+
+
+
+        // function abes()
+        // {
+        //     document.write("python program");
+        // }
+        // abes();
+        // function add(a, b) {
+        //     return a + b;
+        // }
+
+        // function subtract(a, b) {
+        //     return a - b;
+        // }
 
         
-        document.write("<br>Add: " + add(5, 3));
-        document.write("<br>Subtract: " + subtract(5, 3));
+        // document.write("<br>Add: " + add(5, 3));
+        // document.write("<br>Subtract: " + subtract(5, 3));
     </script>
 
 </body>
