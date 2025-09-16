@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter App</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+    }
+    .card {
+      position: relative;
+      width: 320px;
+      padding: 30px 20px;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      text-align: center;
+      color: #fff;
+    }
+    .logo {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      width: 36px;
+    }
+    .title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 10px 0 25px;
+      letter-spacing: 1px;
+    }
+    .counter-value {
+      font-size: 4rem;
+      font-weight: bold;
+      margin: 25px 0;
+      transition: transform 0.2s ease;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+    .btn {
+      width: 55px;
+      height: 55px;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.8rem;
+      color: #fff;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.2s, background 0.3s;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #ee0979, #ff6a00);
+    }
+    .btn:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="counter.png" alt="Logo">
+    <div class="title">COUNTER APP</div>
+    <div id="counter" class="counter-value">0</div>
+    <div class="buttons">
+      <button class="btn" id="decrement">-</button>
+      <button class="btn" id="increment">+</button>
+    </div>
+  </div>
+
+  <script>
+    const counter = document.getElementById("counter");
+    let value = 0;
+
+    function updateCounter(newValue) {
+      counter.textContent = newValue;
+      counter.style.transform = "scale(1.2)";
+      setTimeout(() => counter.style.transform = "scale(1)", 150);
+    }
+
+    document.getElementById("increment").addEventListener("click", () => {
+      if (value < 10) updateCounter(++value);
+      else alert("🚫 Maximum number reached");
+    });
+
+    document.getElementById("decrement").addEventListener("click", () => {
+      if (value > 0) updateCounter(--value);
+      else alert("🚫 Minimum number reached");
+    });
+  </script>
+</body>
+</html>

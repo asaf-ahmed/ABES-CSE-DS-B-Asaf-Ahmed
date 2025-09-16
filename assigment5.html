@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counter App</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            width: 340px;
+            padding: 32px 24px 24px 24px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            width: 38px;
+            height: 38px;
+        }
+
+        .title {
+            margin-top: 0;
+            margin-bottom: 32px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-align: center;
+            width: 100%;
+        }
+
+        .counter-value {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 24px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 24px;
+        }
+
+        .btn {
+            width: 48px;
+            height: 48px;
+            border: none;
+            border-radius: 50%;
+            background: #99c7f8;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            outline: none;
+        }
+
+        .btn:active {
+            background: #ff4d2e;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="logo" src="counter.png" alt="Logo">
+        <div class="title">COUNTER APP</div>
+        <div class="counter-value" id="counter">0</div>
+        <div class="buttons">
+            <button class="btn" id="decrement">-</button>
+            <button class="btn" id="increment">+</button>
+        </div>
+    </div>
+
+    <script>
+        const counter = document.getElementById('counter');
+        const increment = document.getElementById('increment');
+        const decrement = document.getElementById('decrement');
+        let value = 0;
+
+        increment.onclick = function() {
+            if (value < 10) {
+                value++;
+                counter.textContent = value;
+            } else {
+                alert('Maximum number reached');
+            }
+        };
+
+        decrement.onclick = function() {
+            if (value > 0) {
+                value--;
+                counter.textContent = value;
+            } else {
+                alert('Minimum number reached');
+            }
+        };
+    </script>
+</body>
+</html>
