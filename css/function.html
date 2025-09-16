@@ -1,18 +1,34 @@
 <!DOCTYPE html>
 
 <head>
-    <style>
-        #asaf{
+    <!-- <style>
+        /* #asaf{
             height: 300px;
             width: 300px;
             background-color: yellowgreen;
             border: 5px solid black;
-        }
-    </style>
+        } */
+    </style> -->
 </head>
 
-<body>
-    <div id="asaf">
+<body id="asa">
+
+    <button onclick="red()">RED</button>
+    <button onclick="green()">GREEN</button>
+    <button onclick="blue()">BLUE</button>
+
+    <script>
+        function red(){
+            document.getElementById("asa").style.backgroundColor = "red";
+        }
+        function green(){
+            document.getElementById("asa").style.backgroundColor = "green";
+        }
+        function blue(){
+            document.getElementById("asa").style.backgroundColor = "blue";
+        }
+    </script>
+    <!-- <div id="asaf">
         <button onclick="abes()">click</button>
         <p id="aaa"></p>
     </div>
@@ -21,18 +37,9 @@
 
         function abes(){
             document.getElementById("aaa").innerHTML = "Hello, World!";
-        }
+        } -->
 
-
-
-
-
-
-
-
-
-
-        // function abes()
+        <!-- // function abes()
         // {
         //     document.write("python program");
         // }
@@ -48,7 +55,7 @@
         
         // document.write("<br>Add: " + add(5, 3));
         // document.write("<br>Subtract: " + subtract(5, 3));
-    </script>
+    </script> -->
 
 </body>
 
