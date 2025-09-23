@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Cards</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #fce7f3);
+            margin: 0;
+            padding: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            border-radius: 15px;
+            padding: 20px;
+            width: 320px;
+            background: white;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            text-align: center;
+            color: #2563eb;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* Different color headings */
+        #it-card h2 {
+            color: #16a34a; /* Green for IT */
+        }
+
+        #other-card h2 {
+            color: #dc2626; /* Red for Others */
+        }
+
+        .student-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .student-list li {
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            background: #f9fafb;
+            border-left: 4px solid #2563eb;
+            transition: background 0.2s;
+        }
+
+        .student-list li:hover {
+            background: #f3f4f6;
+        }
+
+        .student-list strong {
+            color: #111827;
+            font-size: 1.1rem;
+        }
+
+        .student-list span {
+            display: block;
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" id="it-card">
+            <h2>IT Branch Students</h2>
+            <ul class="student-list" id="it-list"></ul>
+        </div>
+        <div class="card" id="other-card">
+            <h2>Other Branch Students</h2>
+            <ul class="student-list" id="other-list"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Simulated JSON data
+        const students = [
+            { name: "Amit Sharma", roll: "IT101", branch: "IT", year: "2nd" },
+            { name: "Priya Singh", roll: "IT102", branch: "IT", year: "2nd" },
+            { name: "Rahul Verma", roll: "IT103", branch: "IT", year: "2nd" },
+            { name: "Sneha Gupta", roll: "CS201", branch: "CSE", year: "2nd" },
+            { name: "Vikas Yadav", roll: "EC301", branch: "ECE", year: "2nd" }
+        ];
+
+        // Separate students by branch
+        const itStudents = students.filter(s => s.branch === "IT");
+        const otherStudents = students.filter(s => s.branch !== "IT");
+
+        // Render IT students
+        const itList = document.getElementById('it-list');
+        itStudents.forEach(student => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <strong>${student.name}</strong>
+                <span>Roll: ${student.roll}</span>
+                <span>Branch: ${student.branch}</span>
+                <span>Year: ${student.year}</span>
+            `;
+            itList.appendChild(li);
+        });
+
+        // Render Other branch students
+        const otherList = document.getElementById('other-list');
+        otherStudents.forEach(student => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <strong>${student.name}</strong>
+                <span>Roll: ${student.roll}</span>
+                <span>Branch: ${student.branch}</span>
+                <span>Year: ${student.year}</span>
+            `;
+            otherList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
