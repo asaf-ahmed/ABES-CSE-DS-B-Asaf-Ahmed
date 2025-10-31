@@ -1,11 +1,10 @@
 import React from 'react'
+import Card from './components/Card'
 
 function App() {
   return (
     <div>
-      abes
-      
-      <h1>college</h1>
+      <Card />
     </div>
   )
 }
